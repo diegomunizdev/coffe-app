@@ -9,7 +9,7 @@ type CardTitleProps = {
 
 export default function CardTitle({ title, subtitle }: CardTitleProps) {
   return (
-    <View>
+    <View testID="CardTitle-view">
       <Typograph text={title} style={{ fontSize: 20, fontWeight: 'bold' }} />
       {subtitle ? <Typograph text={subtitle} style={{ fontSize: 12, fontWeight: '300' }} /> : null}
     </View>

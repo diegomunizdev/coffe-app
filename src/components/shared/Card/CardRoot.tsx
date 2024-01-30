@@ -14,5 +14,10 @@ export default function CardRoot({ children }: PropsWithChildren) {
       gap: 15,
     },
   });
-  return <View style={styles.container}>{children}</View>;
+
+  return (
+    <View style={styles.container} testID="CardRoot-view">
+      {children}
+    </View>
+  );
 }

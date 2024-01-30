@@ -14,6 +14,7 @@ export default function CardFooter({ children, ...props }: PropsWithChildren & V
         },
         props.style,
       ]}
+      testID="CardFooter-view"
     >
       {children}
     </View>

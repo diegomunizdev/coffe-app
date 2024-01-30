@@ -10,7 +10,11 @@ export default function Typograph(props: TypographProps) {
   const { colors } = useTheme();
 
   return (
-    <Text {...props} style={[{ color: colors.text, fontSize: 16 }, props.style]}>
+    <Text
+      testID="Typograph-text"
+      {...props}
+      style={[{ color: colors.text, fontSize: 16 }, props.style]}
+    >
       {props.text}
     </Text>
   );

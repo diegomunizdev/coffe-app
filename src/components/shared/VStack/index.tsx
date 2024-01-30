@@ -1,17 +1,17 @@
 import React, { PropsWithChildren } from 'react';
 import { View, ViewProps } from 'react-native';
 
-export default function Center({ children, ...props }: PropsWithChildren & ViewProps) {
+export default function VStack({ children, ...props }: PropsWithChildren & ViewProps) {
   return (
     <View
       {...props}
       style={[
         {
-          justifyContent: 'center',
-          alignItems: 'center',
+          flexDirection: 'column',
         },
         props.style,
       ]}
+      testID='VStack-view'
     >
       {children}
     </View>

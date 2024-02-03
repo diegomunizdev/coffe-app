@@ -1,12 +1,13 @@
 import React, { PropsWithChildren, useCallback, useMemo, useState } from 'react';
-import { LayoutContext } from '../../../contexts/layout/Layout.context';
+import { LayoutContext } from '../../../application/contexts/layout/Layout.context';
 
-export default function LayoutProvider({ children }: PropsWithChildren) {
+export default function LayoutProvider({ children }: PropsWithChildren): JSX.Element {
   const [colorTheme, setColorTheme] = useState<'light' | 'dark' | undefined>('light');
 
-  const handleColorTheme = useCallback((colorTheme: 'light' | 'dark') => {
-    setColorTheme(colorTheme);
-  }, []);
+  const handleColorTheme = useCallback(() => {
+    const theme = colorTheme === 'dark' ? 'light' : 'dark';
+    setColorTheme(theme);
+  }, [colorTheme]);
 
   const value = useMemo(() => ({ colorTheme, handleColorTheme }), [colorTheme]);
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Routes from './routes';
+import ViewMain from './components';
 
 export default function Root() {
-  return <Routes />;
+  return <ViewMain />;
 }

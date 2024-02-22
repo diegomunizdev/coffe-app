@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeView from './components/views/Home/Home.view';
+import ViewMain from './components';
 
 export default function Root() {
-  return <HomeView />;
+  return <ViewMain />;
 }

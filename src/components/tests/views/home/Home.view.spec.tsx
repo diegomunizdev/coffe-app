@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import HomeView from '../Home.view';
+import HomeView from '../../../main/views/home/Home.view';
 
 const setup = () => render(<HomeView />);
 
